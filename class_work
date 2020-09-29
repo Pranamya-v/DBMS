@@ -15,21 +15,21 @@
         insert into COURSE values(22,'PYTHON','IS');
         insert into COURSE values(23,'ADE','EC');
         insert into COURSE values(24,'ABCD','AE');
-        insert into TEXT_BOOK values(1,'ME','Mcgraw','AAA');
-        insert into TEXT_BOOK values(2,'CNS','Parson','BBB');
-        insert into TEXT_BOOK values(3,'SE','Michel','CCC');
-        insert into TEXT_BOOK values(4,'ADE','Alice','DDD');
-        insert into TEXT_BOOK values(5,'DAA','Andrew','DDD');
-        insert into BOOK_ADOPTION values(20,1,1);
-        insert into BOOK_ADOPTION values(21,2,2);
-        insert into BOOK_ADOPTION values(22,3,3);
-        insert into BOOK_ADOPTION values(23,4,4);
-        insert into BOOK_ADOPTION values(24,5,5);
-        insert into ENROLL values(40,20,1,'A');
-        insert into ENROLL values(20,23,4,'B');
-        insert into ENROLL values(30,22,3,'C');
-        insert into ENROLL values(10,21,2,'D');
-        insert into ENROLL values(50,24,5,'E');
+        insert into TEXT_BOOK values(11,'ME','Mcgraw','AAA');
+        insert into TEXT_BOOK values(12,'CNS','Parson','BBB');
+        insert into TEXT_BOOK values(13,'SE','Michel','CCC');
+        insert into TEXT_BOOK values(14,'ADE','Alice','DDD');
+        insert into TEXT_BOOK values(15,'DAA','Andrew','DDD');
+        insert into BOOK_ADOPTION values(20,11,11);
+        insert into BOOK_ADOPTION values(21,12,12);
+        insert into BOOK_ADOPTION values(22,13,13);
+        insert into BOOK_ADOPTION values(23,14,14);
+        insert into BOOK_ADOPTION values(24,15,15);
+        insert into ENROLL values(40,20,11,'A');
+        insert into ENROLL values(20,23,14,'B');
+        insert into ENROLL values(30,22,13,'C');
+        insert into ENROLL values(10,21,12,'D');
+        insert into ENROLL values(50,24,15,'E');
 
 ---
 
