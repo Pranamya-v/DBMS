@@ -1,0 +1,50 @@
+**Schema (MySQL v5.7)**
+
+    create table STUDENT(ssn integer primary key,name varchar(10),major varchar(10),bdate date);
+        create table COURSE(course_no integer primary key,cname varchar(10),dept varchar(10));
+        create table TEXT_BOOK(book_ISBN integer primary key,book_title varchar(10),publisher varchar(10),author varchar(10));
+        create table BOOK_ADOPTION(course_no integer, quarter integer,book_ISBN integer,primary key(course_no,quarter),foreign key(course_no)references COURSE(course_no),foreign key (book_ISBN) references TEXT_BOOK(book_ISBN));
+        create table ENROLL(ssn integer,course_no integer,quarter integer,grade varchar(10),primary key(ssn,course_no,quarter),foreign key(ssn)references STUDENT(ssn),foreign key(course_no,quarter) references BOOK_ADOPTION(course_no,quarter));
+        insert into STUDENT values(10,'pranamya','CS','2000-05-10');
+        insert into STUDENT values(20,'pavi','CS','2005-06-10');
+        insert into STUDENT values(30,'asha','EC','2008-03-16');
+        insert into STUDENT values(40,'prarti','EC','2012-08-22');
+        insert into STUDENT values(50,'ashi','AE','2020-03-24');
+        insert into COURSE values(20,'JAVA','CS');
+        insert into COURSE values(21,'DBMS','CS');
+        insert into COURSE values(22,'PYTHON','IS');
+        insert into COURSE values(23,'ADE','EC');
+        insert into COURSE values(24,'ABCD','AE');
+        insert into TEXT_BOOK values(1,'ME','Mcgraw','AAA');
+        insert into TEXT_BOOK values(2,'CNS','Parson','BBB');
+        insert into TEXT_BOOK values(3,'SE','Michel','CCC');
+        insert into TEXT_BOOK values(4,'ADE','Alice','DDD');
+        insert into TEXT_BOOK values(5,'DAA','Andrew','DDD');
+        insert into BOOK_ADOPTION values(20,1,1);
+        insert into BOOK_ADOPTION values(21,2,2);
+        insert into BOOK_ADOPTION values(22,3,3);
+        insert into BOOK_ADOPTION values(23,4,4);
+        insert into BOOK_ADOPTION values(24,5,5);
+        insert into ENROLL values(40,20,1,'A');
+        insert into ENROLL values(20,23,4,'B');
+        insert into ENROLL values(30,22,3,'C');
+        insert into ENROLL values(10,21,2,'D');
+        insert into ENROLL values(50,24,5,'E');
+
+---
+
+**Query #1**
+
+    select * from STUDENT;
+
+| ssn | name     | major | bdate      |
+| --- | -------- | ----- | ---------- |
+| 10  | pranamya | CS    | 2000-05-10 |
+| 20  | pavi     | CS    | 2005-06-10 |
+| 30  | asha     | EC    | 2008-03-16 |
+| 40  | prarti   | EC    | 2012-08-22 |
+| 50  | ashi     | AE    | 2020-03-24 |
+
+---
+
+[View on DB Fiddle](https://www.db-fiddle.com/)
